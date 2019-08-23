@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>magic ball</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="form">
+                <div class="rasengan">
+                    <img src="png_magic_ball__2__by_moonglowlilly_d5tk6bt-pre.png" alt="" id="image">
+                        <p id="answer"></p>
+                </div>
+                <div class="inputs">
+                    <input placeholder="Your Name" type="text" id="yourName">
+                    <input placeholder="Your Question" type="text" id="yourQuestion">
+                </div>
+                    <button class="btn btn-warning" id="button">Cast</button>
+                <div class="tables">
+                    <table id="results">
+                        <tr>
+                            <th class="nameth">Name</th>
+                            <th class="questionth">Your Question</th>
+                            <th class="answerth">Answer</th>
+                        </tr>
+                    </table>
+                    <div class="results">
+                        <div class="prevs" id="prevs"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

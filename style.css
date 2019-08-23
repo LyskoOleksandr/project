@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+tr, td, th {
+    border: 1px solid cornflowerblue;
+}
+
+img {
+    width: 400px;
+}
+
+input{
+    text-align: center;
+    border: 1px solid cornflowerblue;
+} 
+
+.rasengan {
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+
+#answer {
+    width: 200px;
+    top: 45%;
+    left: 24%;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0 auto;
+    position: absolute;
+    font-size: 90%;
+  }
+
+.btn {
+    margin: auto;
+    width: 100px;
+}
+
+.inputs {
+    display: flex;
+    margin: 20px 0;
+}
+
+.tables {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#yourName {
+    width: 150px; 
+    margin-right: 10px;   
+}
+
+#yourQuestion {
+    width: 100%;
+}
+
+.form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nameth {
+    width: 150px;
+}
+
+.questionth {
+    width: 300px;
+}
+
+.answerth {
+    width: 300px;
+}
+
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform: rotate(1080deg);}
+}
+
+.rotation {
+    animation: spin 3s linear 0s ;
+}
+
+.error {
+    border: 2px solid salmon;
+}
