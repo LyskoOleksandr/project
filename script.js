@@ -8,10 +8,6 @@ const table = document.getElementById('results');
 let prevResults = [];
 let prevAnswer = {};
 
-
-
-
-
 let ball = {};
 ball.allAnswers = ["It is certain.",
     "It is decidedly so.",
@@ -42,7 +38,12 @@ ball.getAnswer = function (question) {
 }
 
 button.addEventListener('click', function () {
+    prevResults.length = 0;
     removeClasses();
+    setTimeout(() => {
+        image.classList.remove('rotation');    
+    }, 2000);
+
     if (yourName.value !== '' && question.value !== '') {
         ball.randElems(question);
         showprev();
@@ -70,20 +71,15 @@ function removeClasses() {
 
 ball.randElems = function () {
     image.classList.add('rotation');
-    var array = [];
-    for (let i = 0; i < 9; i++) {
+    let array = [];
+    for (let i = 0; i < 7; i++) {
         ball.getAnswer(question);
         array[i] = answerP.innerHTML;
         prevResults.push(array[i]);
     }
-    prevAnswer = array[8];
-    return array = [];
-    prevResults = []; 
-    // setTimeout(() => {
-        // image.classList.remove('rotation');    
-    // }, 2000);
+    let  x = array.length - +1;
+    prevAnswer = array[x];
 }
-
 
 function showprev() {
     let htmlResult = document.createElement('tr');
@@ -96,19 +92,11 @@ function showprev() {
 function answerElems(arr){
     let i = 0;
     let timerId = setInterval(function(){
-        answerP.innerHTML = arr[i];
-        if (i == arr[7]) {
+        if (i == 6) {
             clearInterval(timerId);
         }
+        answerP.innerHTML = arr[i];
         i++;
-    }, 500)
+    }, 250)
     return arr;
 }
-
-
-
-
-// рандомно додаються в массив 6 рандомних враз з головного массиву і по порядку відображаються
-// останній елемент додається в попередні відповіді
-
-
